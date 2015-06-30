@@ -216,8 +216,8 @@ Up   Speed: ${upspeedgraph wlp4s0 30, 150 ffff00 00ff00} $alignr ${upspeed wlp4s
 ${color}$hr ${if_mpd_playing}
 Song: ${mpd_smart}
 Album: ${mpd_album}
-Status: ${mpd_elapsed}/${mpd_length}
-${mpd_bar 10,200}	${mpd_percent}%
+Status: ${mpd_elapsed}/${mpd_length}  Vol: ${mpd_vol}
+${mpd_bar 5,200}  ${mpd_percent}%
 Random: ${mpd_random}	Repeat: ${mpd_repeat}
 ${else}
 MPD not playing.
