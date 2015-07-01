@@ -220,5 +220,5 @@ Status: ${mpd_elapsed}/${mpd_length}  Vol: ${mpd_vol}
 ${mpd_bar 5,200}  ${mpd_percent}%
 Random: ${mpd_random}	Repeat: ${mpd_repeat}
 ${else}
-MPD not playing.
+MPD not playing...
 ${endif}
