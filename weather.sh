@@ -13,7 +13,7 @@ do
 	mkdir -p ${DIR}
 done
 
-curl ${API} -o ${JSON}
+curl -s ${API} -o ${JSON}
 
 for day in 0 1 2 3
 do
@@ -29,13 +29,15 @@ do
 	daypic[$day]="${TMPDIR}/day/${day}.png"
 	nightpic[$day]="${TMPDIR}/night/${day}.png"
 
-	echo "${dayPicUrl[$day]}" | xargs curl -o "${daypic[$day]}"
-	echo "${nightPicUrl[$day]}" | xargs curl -o "${nightpic[$day]}"
+	echo "${dayPicUrl[$day]}" | xargs curl -s -o "${daypic[$day]}"
+	echo "${nightPicUrl[$day]}" | xargs curl -s -o "${nightpic[$day]}"
 done
 
-# echo ${date[*]}
-# echo ${weather[*]}
-# echo ${temperature[*]}
-# echo ${wind[*]}
-# echo ${dayPicUrl[*]}
-# echo ${nightPicUrl[*]}
+test() {
+	echo ${date[*]}
+	echo ${weather[*]}
+	echo ${temperature[*]}
+	echo ${wind[*]}
+	echo ${dayPicUrl[*]}
+	echo ${nightPicUrl[*]}
+}
