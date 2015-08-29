@@ -40,4 +40,6 @@ test() {
 	echo ${wind[*]}
 	echo ${dayPicUrl[*]}
 	echo ${nightPicUrl[*]}
+	echo ${daypic[*]}
+	echo ${nightpic[*]}
 }
