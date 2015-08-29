@@ -45,4 +45,6 @@ conky.config = {
 
 conky.text = [[
 IP: ${addr wlp4s0}
+
+${exec cal}
 ]];
