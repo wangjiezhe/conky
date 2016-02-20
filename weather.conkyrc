@@ -41,10 +41,15 @@ conky.config = {
 	use_spacer = 'none',
 	show_graph_scale = false,
 	show_graph_range = false,
+
+        if_up_strictness = address
 };
 
 conky.text = [[
-IP: ${addr wlp4s0}
+${if_up enp5s0}IP: ${addr enp5s0}
+${else}
+${add wlp4s0}
+${endif}
 
 ${exec cal}
 ]];
