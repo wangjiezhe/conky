@@ -46,14 +46,13 @@ conky.config = {
 };
 
 conky.text = [[
-$alignc ${color red}Hostname: ${nodename}
-${color}$hr
-${color blue}Sys: ${sysname}
+${color red}Sys: ${sysname}
 ${color yellow}Kernel: ${kernel}
 ${color green}Machine: ${machine}
 ${color orange}Uptime: ${uptime}
 ${color purple}Load: ${loadavg}
 ${color grey}Frequency (in GHz): $freq_g
+${color blue}Hostname: ${nodename}
 ${color grey}$stippled_hr
 ${color pink}Battery: ${battery_bar 10,100} ${battery_percent}%
 ${color magenta}Time: ${time %H:%M:%S}
