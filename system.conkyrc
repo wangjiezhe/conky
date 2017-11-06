@@ -21,7 +21,7 @@ conky.config = {
 	gap_x = 10,
 	gap_y = 30,
 	minimum_width = 170, minimum_height = 5,
-	maximum_width = 500,
+	maximum_width = 400,
 
 	no_buffers = true,
 	double_buffer = true,
