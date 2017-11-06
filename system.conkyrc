@@ -85,10 +85,13 @@ IO: ${diskiograph 30,200 ff0000 0000ff} $alignr ${diskio}
 ${color}$hr${if_existing /proc/net/route enp5s0}
 Down Speed:	${downspeedgraph enp5s0 30,150 ff0000 ffff00} $alignr ${downspeed enp5s0}
 Up   Speed:	${upspeedgraph enp5s0 30, 150 ffff00 00ff00} $alignr ${upspeed enp5s0}
+${else}${if_existing /proc/net/route enp0s20u2}
+Down Speed:	${downspeedgraph enp0s20u2 30,150 ff0000 ffff00} $alignr ${downspeed enp0s20u2}
+Up   Speed:	${upspeedgraph enp0s20u2 30, 150 ffff00 00ff00} $alignr ${upspeed enp0s20u2}
 ${else}
 Down Speed:	${downspeedgraph wlp4s0 30,150 ff0000 ffff00} $alignr ${downspeed wlp4s0}
 Up   Speed:	${upspeedgraph wlp4s0 30, 150 ffff00 00ff00} $alignr ${upspeed wlp4s0}
-$endif${color}$hr${if_mpd_playing}
+${endif}${endif}${color}$hr${if_mpd_playing}
 ${mpd_status}
 Song: ${mpd_smart}
 Album: ${mpd_album}

@@ -44,10 +44,14 @@ conky.config = {
 };
 
 conky.text = [[
+${if_existing /proc/net/route tun0}IP: ${addr tun0}
+${else}
 ${if_existing /proc/net/route enp5s0}IP: ${addr enp5s0}
 ${else}
-IP: ${addr wlp4s0}
-${endif}
+${if_existing /proc/net/route enp0s20u2}IP: ${addr enp0s20u2}
+${else}
+${if_existing /proc/net/route wlp4s0}IP: ${addr wlp4s0}
+${endif}${endif}${endif}${endif}
 
 ${exec cal}
 ]];
