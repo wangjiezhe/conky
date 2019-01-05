@@ -85,6 +85,9 @@ IO: ${diskiograph 30,200 ff0000 0000ff} $alignr ${diskio}
 ${color}$hr${if_existing /proc/net/route enp5s0}
 Down Speed:	${downspeedgraph enp5s0 30,150 ff0000 ffff00} $alignr ${downspeed enp5s0}
 Up   Speed:	${upspeedgraph enp5s0 30, 150 ffff00 00ff00} $alignr ${upspeed enp5s0}
+${else}${if_existing /proc/net/route enp0s20u1}
+Down Speed:	${downspeedgraph enp0s20u1 30,150 ff0000 ffff00} $alignr ${downspeed enp0s20u1}
+Up   Speed:	${upspeedgraph enp0s20u1 30, 150 ffff00 00ff00} $alignr ${upspeed enp0s20u1}
 ${else}${if_existing /proc/net/route enp0s20u2}
 Down Speed:	${downspeedgraph enp0s20u2 30,150 ff0000 ffff00} $alignr ${downspeed enp0s20u2}
 Up   Speed:	${upspeedgraph enp0s20u2 30, 150 ffff00 00ff00} $alignr ${upspeed enp0s20u2}
