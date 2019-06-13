@@ -52,6 +52,8 @@ ${if_existing /proc/net/route enp0s20u1}IP: ${addr enp0s20u1}
 ${endif}
 ${if_existing /proc/net/route enp0s20u2}IP: ${addr enp0s20u2}
 ${endif}
+${if_existing /proc/net/route enp0s20u3}IP: ${addr enp0s20u3}
+${endif}
 ${if_existing /proc/net/route wlp4s0}IP: ${addr wlp4s0}
 ${endif}
 
